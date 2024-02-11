@@ -1,13 +1,11 @@
 # task_tracker
 # Flask project
 # To run this project-
-# cd task_tracker
-# On Windows
-# python -m venv venv
-# On macOS/Linux
-# python3 -m venv venv
-# venv\Scripts\activate
-# pip install Flask
-# flask run
+# create virtual environment - pip install virtualenv
+# virtualenv foo
+# go to the foo directory
+# activate virtual env- Scripts by Scripts/activate
+# pip install flask
+# to run this project python app.py
 
-#that's it.This project will run as usual
+# that's it.This project will run as usual
