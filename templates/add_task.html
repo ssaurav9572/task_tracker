@@ -6,19 +6,26 @@
     <title>Add Task</title>
 </head>
 <body>
+    <!-- Title of the page -->
     <h1>Add Task</h1>
+    <!-- Form for adding a new task -->
     <form method="post" action="{{ url_for('add_task') }}">
+        <!-- Input field for the title of the task -->
         <label for="title">Title:</label>
         <input type="text" name="title" required><br>
 
+        <!-- Textarea for the description of the task -->
         <label for="description">Description:</label>
         <textarea name="description" required></textarea><br>
 
+        <!-- Input field for the due date of the task -->
         <label for="due_date">Due Date:</label>
         <input type="text" name="due_date" placeholder="YYYY-MM-DD" required><br>
 
+        <!-- Submit button to add the task -->
         <input type="submit" value="Add Task">
     </form>
+    <!-- Link to navigate back to the task list -->
     <a href="{{ url_for('index') }}">Back to Task List</a>
 </body>
 </html>
