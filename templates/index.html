@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>Task Tracker</title>
 </head>
 <body>
+    <!-- Heading for the task list -->
     <h1>Task List</h1>
+    <!-- Unordered list to display tasks -->
     <ul>
+        <!-- Loop through each task in the tasks list -->
         {% for task in tasks %}
             <li>
+                <!-- Link to view task details, with task_id as loop index -->
                 <a href="{{ url_for('task_details', task_id=loop.index0) }}">{{ task.title }}</a>
+                <!-- Display "(Completed)" if the task is completed -->
                 {% if task.completed %}(Completed){% endif %}
             </li>
         {% endfor %}
     </ul>
+    <!-- Link to add a new task -->
     <a href="{{ url_for('add_task') }}">Add Task</a>
 </body>
 </html>
